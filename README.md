@@ -11,8 +11,6 @@ Currently, it exposes limited phone features, with future expansions planned.
 - **Battery status:** Query phone battery info using `/battery` endpoint.  
 - **Vibration:** Trigger phone vibration with `/vibrate` endpoint.  
 
-> ⚠ All endpoints require an API key in the header (`x-api-key: Archit`) for authentication.  
-
 > ⚠ Notifications (`/notif`) and file transfer (`/send` & `/receive`) **do not work yet** due to Termux limitations on Android storage and notification access.
 
 ---
