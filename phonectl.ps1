@@ -1,4 +1,3 @@
-# phonectl.ps1
 param(
     [string]$cmd,
     [string]$arg1,
