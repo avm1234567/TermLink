@@ -42,4 +42,7 @@ Currently, it exposes limited phone features, with future expansions planned.
 
   - Linux Terminal Support: Adapt client scripts for Linux to interact with the server over LAN.
 
-  - Shift from Termux to any other platform.
+## Resources
+
+   - Termux: https://wiki.termux.dev/wiki/Main_Page
+   - Flask: https://pypi.org/project/Flask/
