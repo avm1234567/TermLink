@@ -42,4 +42,4 @@ Currently, it exposes limited phone features, with future expansions planned.
 
   - Linux Terminal Support: Adapt client scripts for Linux to interact with the server over LAN.
 
-  - Shift from teramux to any other platform.
+  - Shift from Termux to any other platform.
