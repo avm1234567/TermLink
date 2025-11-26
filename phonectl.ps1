@@ -5,11 +5,9 @@ param(
     [string]$arg2
 )
 
-# -----------------------
-# CONFIG
-# -----------------------
+
 $PHONE = "http://192.168.0.193:6969"   # your phone IP
-$API_KEY = "Archit"                    # same as in server.py
+$API_KEY = "API-KEY"                    # same as in server.py
 
 $headers = @{ "x-api-key" = $API_KEY }
 
@@ -42,14 +40,11 @@ switch ($cmd) {
         $filePath = $arg1
         $fileName = Split-Path $filePath -Leaf
 
-        # Read file & convert to Base64
         $bytes = [System.IO.File]::ReadAllBytes($filePath)
         $base64 = [System.Convert]::ToBase64String($bytes)
 
-        # Prepare JSON
         $json = @{ "file" = $base64; "filename" = $fileName } | ConvertTo-Json -Compress
 
-        # Send POST with JSON explicitly as UTF8
         Invoke-RestMethod -Uri "$PHONE/receive" -Method Post -Body $json -ContentType "application/json" -Headers @{ "x-api-key" = $API_KEY }
 
         Write-Host "Uploaded $arg1 → phone"
