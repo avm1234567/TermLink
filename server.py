@@ -4,7 +4,7 @@ import subprocess, os
 app = Flask(__name__)
 
 
-API_KEY = "Archit"
+API_KEY = "API-KEY"
 
 def run(cmd):
     return subprocess.check_output(cmd.split()).decode()
